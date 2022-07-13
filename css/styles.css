@@ -2,6 +2,21 @@
 --------------------------*/
 @import url("https://rsms.me/inter/inter-ui.css");
 
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url("/fonts/JetBrainsMono[wght].ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "destronic";
+  src: url("/fonts/Modern Destronic.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'zdyk';
+  src: url("/fonts/Zdyk\ Sagittarius.otf") format('opentype'); 
+}
+
 /* Variables
 ---------------------------*/
 
@@ -86,9 +101,10 @@ body {
   background-color: var(--background);
   border-radius: 5px;
   font-size: 112.5%;
-  font-family: "Inter UI", Helvetica, Arial, sans-serif;
+  font-family: "JetBrains Mono", Helvetica, Arial, sans-serif;
   line-height: 1.4;;
   color: var(--text-color);
+
 }
 
 body.no-js {
@@ -186,6 +202,11 @@ main {
   padding-left: 1em;
 }
 
+.about img {
+  max-width: 350px;
+  box-shadow: black 0 0 7px;
+}
+
 /* Links section
 ---------------------------*/
 
@@ -206,6 +227,8 @@ main {
   text-decoration: none;
   font-size: clamp(1.5rem, 5vw, 10rem);
   color: var(--text-color);
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .links > a > strong {
@@ -248,6 +271,7 @@ main {
   transition: transform 150ms ease-in-out;
   transform: translateX(-100%);
   z-index: 0;
+  color: transparent;
 }
 
 @media (prefers-reduced-motion) {
@@ -259,6 +283,7 @@ main {
 .links > a:hover > span,
 .links > a:focus > span  {
   transform: translateX(1em);
+  color: var(--text-color);
 }
 
 .links > a:focus {
@@ -268,4 +293,8 @@ main {
 .links > a:focus,
 .links > a:focus > strong {
   background-color: var(--background-alt);
+}
+
+footer h2 {
+  font-family: 'zdyk', Courier, monospace;
 }
